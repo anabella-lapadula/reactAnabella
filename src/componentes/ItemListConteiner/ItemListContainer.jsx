@@ -4,6 +4,7 @@ import { gFetch } from "../../utils/gFetch"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useParams } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = ({greeting}) => {
   const [productos, setProductos]= useState([])
@@ -30,34 +31,19 @@ const {idCategoria}= useParams()
 
  console.log(productos)
 
-  return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-     
-
-    }}> 
-         { loading 
-         ? 
-         <h2> Cargando...</h2>
+  return ( 
+       loading 
+         ?
+          <h2> Cargando...</h2>
 
          :
-         
-         productos.map(producto => 
-                 
-                    <Card  key ={producto.id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={producto.img} />
-                        <Card.Body>
-                        <Card.Title>Nombre: {producto.nombre}</Card.Title>
-                        <Card.Text>precio: {producto.precio}
-                        </Card.Text>
-                        <Link to={`/detalle/${producto.id}`}>   <Button variant="primary">Detalle</Button></Link>
-          
-                      </Card.Body>
-                    </Card>
-                  
-          )} 
+         <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+      
+          }} >
+            <ItemList productos={productos}/>
      </div>
   )
 }
