@@ -1,10 +1,8 @@
 let productos = [
-    { id: 1 , nombre: 'Jirafa', precio: 1520, img: '/public/imagenes/jirafa.jpeg'},
-    { id: 2 , nombre: 'perro', precio: 1520, img: '/public/imagenes/jirafa.jpeg'},
-    { id: 3 , nombre: 'gato', precio: 1520, img: '/public/imagenes/jirafa.jpeg'},
-    { id: 4 , nombre: 'remera', precio: 1520, img: '/public/imagenes/jirafa.jpeg'},
-    { id: 5 , nombre: 'remera', precio: 1520, img: '/public/imagenes/jirafa.jpeg'},
-    { id: 6 , nombre: 'remera', precio: 520, img: '/public/imagenes/jirafa.jpeg'}
+    { id: '1' ,categoria: 'animales', nombre: 'Jirafa', precio: 1520, img: '/public/imagenes/jirafa.jpeg'},
+    { id: '2 ',categoria: 'animales', nombre: 'Oso Gris', precio: 1520, img: '/public/imagenes/oso.jpeg'},
+    { id: '3' ,categoria: 'personajes', nombre: 'Oso Rojo', precio: 1520, img: '/public/imagenes/osorojo.jpg'},
+    { id: '4 ',categoria: 'animales', nombre: 'Pato', precio: 1520, img: '/public/imagenes/patito.jpg'}
 ]
 
 export const gFetch= () =>{

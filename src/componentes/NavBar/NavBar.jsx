@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,25 +8,21 @@ const NavBar = () => {
   return (
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">E-commerce</Navbar.Brand>
+      <Link to='/'>  <Navbar.Brand href="#home">E-commerce</Navbar.Brand> </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Inicio</Nav.Link>
-       
-            <NavDropdown title="Productos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Personajes de Disney</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Animales
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Cuentos </NavDropdown.Item>
+            <NavDropdown title="Categorias" id="collasible-nav-dropdown">
+            <Link to='/categoria/animales'> <NavDropdown.Item href="#action/3.2"> Animales </NavDropdown.Item>    </Link> 
+               <Link to='categoria/personajes'> <NavDropdown.Item href="#action/3.3">Personajes 
+                </NavDropdown.Item>    </Link> 
             </NavDropdown>
-            <Nav.Link href="#deets">Contacto</Nav.Link>
+         <Nav.Link href="#deets">Contacto</Nav.Link>
           </Nav>
           <Nav>
-            
+           <Link to='/cart'> <CartWidget/> </Link>
             <Nav.Link eventKey={2} href="#memes">
-              Carrito 🛒
+          
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
